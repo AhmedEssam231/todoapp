@@ -10,46 +10,7 @@ use Illuminate\Support\Facades\Hash;
 
 class TodoController extends Controller
 {
-function showRegistrationForm(){
-    return view('auth.register');
-}
-
-
-function register(Request $request){
-  $s= $request->validate([
-        'name'=>'required',
-        'email'=>'required|email|unique:users',
-        'password' => 'required|min:6'
-    ]);
-    User::create([
-        'name'=>$request->name,
-       'email'=>$request->email,
-       'password' => Hash::make($request->password)
-    ]);
- 
-    return view('auth.login')->with('success', 'Registration successful');
-   
-   
-}
-function showLoginForm(){
-    return view('auth.login');
-}
-
-function login(Request $request){
-    $credentials=$request->only('email','password');
-
-    if(Auth::attempt($credentials)){
-        return redirect('/index');
-    }
-    else{
-        return redirect('/')->with('error','Error please try agien enter email and password ');
-    }
-}
-
-
-
-
-   function index(){
+    public function index(){
     $mytodo=mytodo::all();
     $data = compact('mytodo');
     return view('welcome')->with($data);
@@ -57,7 +18,7 @@ function login(Request $request){
 
 
 
-   function store (Request $request){
+   public function store (Request $request){
     $request->validate([
         'name' => 'required',
         'work' => 'required',
@@ -71,7 +32,7 @@ function login(Request $request){
      return redirect(route("home"));
 }
 
-function delete($id){
+public function delete($id){
     mytodo::find($id)->delete();
     return redirect(route('home'));
 }
@@ -101,7 +62,7 @@ public function update(Request $request){
         return redirect(route("home"));
 }
 
-function show($id){
+public function show($id){
    $todo=mytodo::find($id);
    $data=compact('todo');
     return view('show')->with($data);

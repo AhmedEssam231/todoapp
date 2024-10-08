@@ -16,7 +16,7 @@
             background-color: #f0f2f5;
         }
         .signup-container {
-            background-color: white;
+            background-color: #ffffff;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
@@ -29,7 +29,7 @@
         .signup-container p {
             margin: 0;
             font-size: 14px;
-            color: #606770;
+            color: #0d0d0e;
         }
         .signup-container input, .signup-container select {
             width: 100%;
@@ -53,7 +53,7 @@
         .signup-container button {
             width: 100%;
             padding: 10px;
-            background-color: #2ac71b;
+            background-color: #109442;
             color: white;
             border: none;
             border-radius: 5px;

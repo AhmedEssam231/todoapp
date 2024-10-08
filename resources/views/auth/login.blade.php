@@ -20,7 +20,7 @@
             background-color: #f0f2f5;
         }
         .login-container {
-            background-color: white;
+            background-color: #fffeff;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
@@ -31,29 +31,29 @@
             width: 100%;
             padding: 10px;
             margin: 10px 0;
-            border: 1px solid #ccc;
+            border: 1px solid #e6dcdc;
             border-radius: 5px;
         }
         .login-container button {
             width: 100%;
             padding: 10px;
-            background-color: #1877f2;
+            background-color: #0b4494;
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
         }
         .login-container button:hover {
-            background-color: #165cdb;
+            background-color: #1d241d;
         }
         .login-container a {
             display: block;
             margin: 10px 0;
-            color: #1877f2;
+            color: #2d4735;
             text-decoration: none;
         }
         .login-container .create-account {
-            background-color: #42b72a;
+            background-color: #30b337;
             margin-top: 15px;
         }
     </style>

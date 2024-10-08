@@ -1,13 +1,14 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\TodoController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/register',[TodoController::class,'showRegistrationForm'])->name('register');
-Route::post('/register',[TodoController::class,'register'])->name('register2');
+Route::get('/register',[AuthController::class,'showRegistrationForm'])->name('register');
+Route::post('/register',[AuthController::class,'register'])->name('register2');
 
-Route::get('/',[TodoController::class,'showLoginForm']);
-Route::post('/',[TodoController::class,'login'])->name('login');
+Route::get('/',[AuthController::class,'showLoginForm']);
+Route::post('/',[AuthController::class,'login'])->name('login');
 
 Route::get('/index',[TodoController::class,'index'])->name('home');
 
